@@ -757,91 +757,133 @@ REVIEW FOLDER 8 - UPDATE ITEMS IN A LIST
          like onClick={() => myFunction()}.
 
 REVIEW FOLDER 9 - React Testing 
-   - https://courses.robinwieruch.de/p/the-road-to-learn-react --> Course Modules
+   Note: If you are a beginner and want to learn how to create a react app go to:
+          https://www.robinwieruch.de/the-road-to-learn-react/
+
+   1. Step1: go to  https://courses.robinwieruch.de/p/the-road-to-learn-react --> Course Modules
+        and select "Testing" menu item
         --> React Router 
         --> Tables in React
-        --> Testing
-          
+        --> Testing 
+        ....
+
        - Select Testing Menu Item:  
-          (1) select Testing in React Pane - https://www.robinwieruch.de/react-testing-tutorial/
-                Get an overview about testing in React
+          (1) then select  Testing in React Pane - https://www.robinwieruch.de/react-testing-tutorial/
+              Read the whole page to get a good overview
 
-               - go tohttps://www.robinwieruch.de/minimal-react-webpack-babel-setup/ to setup 
-                 a minimal 
+              After going through this overview page create a React project by clicking 
+              the link: "This article to set up a minimal React with Webpack application"
+               https://www.robinwieruch.de/minimal-react-webpack-babel-setup/   
+             
+              Within this link click "boilerplate project on github" link and download the 
+              boiler project created by Robin in https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
+              The project enables you to write JavaScript applications with Webpack and Babel.
+            
+              Extract the project to: C:\_AMyReactDev\reviewFolder9-how-to-test-react-components
+              and do the following:
 
-
-          (2) Select JEST Pane - https://www.robinwieruch.de/react-testing-jest/
-
-               Learn how to test React components with Jest.
-                1. First create a simple React application 
-                  - go to https://www.robinwieruch.de/minimal-react-webpack-babel-setup/ (How to React with Webpack 5 - Setup Tutorial) to set up a minimal React with Webpack application
-                  
-                2. Then create React project by using the boilerplate project by using the project
-                    created by Robin. Copy this project from:
-                     https://github.com/rwieruch/minimal-react-webpack-babel-setup to   
-                     C:\_AMyReactDev\reviewFolder9-how-to-test-react-components
-
-                3. bring up the project i VS Code and do:
                        - npm install 
                        - npm start 
                        - visit http://localhost:8000/
-          
-                4. go to React with Babel - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-webpack  
-                      - go to ./src of the minimal project and do: 
-                        npm install --save react react-dom
-                      
-                      - add the following to .src/index.js implement your entry point
 
-                      - add the following to dist/index.html  
-                           <!DOCTYPE html>
-                        <html>
-                          <head>
-                            <title>Hello React</title>
-                          </head>
-                          <body>
-                            <div id="app"></div>
-                            <script src="./bundle.js"></script>
-                          </body>
-                        </html>
+              While in  https://www.robinwieruch.de/minimal-react-webpack-babel-setup/ go to 
+              the section labelled Table of Contents and go through the link of the following
+              tutorials: 
+                  
+                 A. React with Babel - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-babel
+                 B. React with Webpack - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#react-with-webpack
+                 C. Hot Module Replacement in React - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/#hot-module-replacement-in-react
 
-                5. next go to Jest Testing in React Setup - https://www.robinwieruch.de/react-testing-jest/
-                      - add the following to src/index.js
-                      - add the following code to src/app.js 
-                          then do npm install axios
-                      - In order to get our tests up and running, set up Jest by installing 
-                        it on the command line as development dependencies:
+               (A). Details of React with Babel tutorial:
+                     npm install --save-dev @babel/preset-react
+
+                     Add the "preset" code to .babelrc
+
+                     Next let's inform Webpack in our webpack.config.js file about files 
+                     with the JSX extension to make sure that they run through the 
+                     transpiling step as well. see notes in webpack.config.js
+
+                (B). Details of React with Webpack tutorial: 
+                     Next In order to use React, you need two libraries (node packages):
+                     react and react-dom. 
+                       npm install --save react react-dom
+
+                     Next go to stc/index.js and implement your entry point:    
+
+                     Next go dist/index.html and add <div id="app"></div>
+
+                     do Start your application with npm start to see the output.
+
+                (C). Details of React with Hot Module Replacement tutorial: 
+                     A huge development boost will give you react-hot-loader (Hot Module Replacement). 
+                     It will shorten your feedback loop during development. Basically whenever you 
+                     change something in your source code, the change will apply in your app running 
+                     in the browser without reloading the entire page.
+
+                     First do: npm install --save-dev react-hot-loader
+                     Second: Add the configuration to your webpack.config.js file:
+                     Third modify src/index.js. You have to define that hot reloading is 
+                          available and should be used:
+
+            (2) Finally create your first component. In your src/index.js file define
+              App.js component and import app.js 
+
+                    cd src/
+                    touch App.js   
+                    then go to VS Code and add the code to App.js
+
+            (3) Exercises (To Do)
+                 - go to Advance Webpack Setup 
+                      https://www.robinwieruch.de/webpack-advanced-setup-tutorial/
+                 - Put it into your minimal React with Webpack application
+                 - Confirm your final result with the official advanced React with Webpack setup
+                      https://github.com/rwieruch/advanced-react-webpack-babel-setup
+
+   2. Step2: Configure your testing:
+         Go to Course Module --> Testing --> Select JEST Pane - https://www.robinwieruch.de/react-testing-jest/
+
+         Go to Jest Testing in React Setup - https://www.robinwieruch.de/react-testing-jest/
+
+         Bring up C:\_AMyReactDev\reviewFolder9-how-to-test-react-components we created in Step 1.
+            - add the following to src/index.js
+            - add the following code to src/app.js and do 
+
+            - in order to get our tests up and running, set up Jest by installing 
+              it on the command line as development dependencies:
                           npm install --save-dev jest
 
-                  5.1 modify package.json 
+                  (A) modify package.json 
                       "scripts": {
                         "start": "webpack serve --config ./webpack.config.js --mode development",
                         "test": "jest --config ./jest.config.json"
                       },
 
-                  5.2 define this optional configuration for Jest in a configuration file. 
+                  (B) define this optional configuration for Jest in a configuration file. 
                     Create it on the command line: touch jest.config.json
 
-                  5.3 put the following test pattern in test.config.json to run all test files
+                  (C) put the following test pattern in test.config.json to run all test files
                     which shall be executed by Jest
                         {
                           "testRegex": "((\\.|/*.)(spec))\\.js?$"
                         }
 
-          (3) Finally, add a test file next to your App component's file in a new src/App.spec.js 
-           file. First, create the test file on the command line:
+   3. Finally, add a test file next to your App component's file in a new src/App.spec.js 
+      file.
+             First, create the test file on the command line:
               touch src/App.spec.js
-          (4).  Add another npm script in package.json for watching your Jest tests
-            "test:watch": "npm run test -- --watch"
+             Second, Add another npm script in package.json for watching your Jest tests
+              "test:watch": "npm run test -- --watch"
    
-          (5). now run the test:
+             Now run the test:
               npm run test:watch
 
 
 
 
-                  - next go to Hot Module Replacement in React - obinwieruch.de/minimal-react-webpack-babel-setup/#hot-module-replacement-in-react
 
-  ======================================================================            
+  //============================================  
+  //*                   Notes:
+  //============================================          
    - Type of Tests:
         - unit tests, integration tests, snapshot tests, 
           end-to-end tests (also called E2E tests) 

@@ -25,3 +25,14 @@ module.exports = {
     hot: true,
   },
 };
+
+// Next, let's inform Webpack in our webpack.config.js file about files with 
+// the JSX extension to make sure that they run through the transpiling step as well:
+// Add: 
+//     test: /\.(js|jsx)$/,
+//      extensions: ['*', '.js', '.jsx'],
+
+// plugins: [new webpack.HotModuleReplacementPlugin()],
+// devServer: {
+//   static: path.resolve(__dirname, './dist'),
+//   hot: true,
