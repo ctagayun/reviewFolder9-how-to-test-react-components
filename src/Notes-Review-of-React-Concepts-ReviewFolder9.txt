@@ -871,8 +871,26 @@ REVIEW FOLDER 9 - React Testing
             Read more about Jest's Globals - https://jestjs.io/docs/api
             Read more about Jest's Assertions https://jestjs.io/docs/expect
 
-   3. Finally, add a test file next to your App component's file in a new src/App.spec.js 
-      file.
+   3. STEP3: In order to get our tests up and running, 
+         - set up Jest by:  npm install --save-dev jest
+         
+         - modify package.json "scripts" add: 
+             "test": "jest --config ./jest.config.json"
+
+         
+   4. Finally Jest Snapshot Testing in React  (TODO)
+       - Jest introduced the so-called Snapshot Test. Basically a Snapshot Test creates 
+         a snapshot -- which is stored in a separate file -- of your rendered component's 
+         output when you run your test.
+
+       - By using Jest for Snapshot Tests, you can keep your tests lightweight, without worrying 
+         too much about implementation details of the component. Let's see how these work in React. 
+
+         install the react-test-renderer utility library:
+            npm install --save-dev react-test-renderer
+
+       -  add a test file next to your App component's file in a new src/App.spec.js file.
+
              First, create the test file on the command line:
               touch src/App.spec.js
              Second, Add another npm script in package.json for watching your Jest tests
