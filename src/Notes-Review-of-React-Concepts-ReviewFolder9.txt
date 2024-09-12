@@ -866,6 +866,10 @@ REVIEW FOLDER 9 - React Testing
                         {
                           "testRegex": "((\\.|/*.)(spec))\\.js?$"
                         }
+        EXERCISES: 
+            Read more about getting started with Jest - https://jestjs.io/docs/getting-started
+            Read more about Jest's Globals - https://jestjs.io/docs/api
+            Read more about Jest's Assertions https://jestjs.io/docs/expect
 
    3. Finally, add a test file next to your App component's file in a new src/App.spec.js 
       file.
