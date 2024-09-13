@@ -1029,6 +1029,9 @@ REVIEW FOLDER 9 - React Testing
 
        - Defining an "It-Block" (which can be named "test instead of it")
 
+   6. Testing using Vitest React Testing Library
+        - https://www.robinwieruch.de/vitest-react-testing-library/
+        
   //============================================  
   //*    Notes: React Testing Overview
   //============================================          
