@@ -775,7 +775,9 @@ REVIEW FOLDER 9 - React Testing
 
               After going through this overview page create a React project by clicking 
               the link: 
-                  How to React with Webpack 5 - Setup Tutorial https://www.robinwieruch.de/minimal-react-webpack-babel-setup/   
+
+                  How to Setup React with Webpack 5 and Babel
+                     https://www.robinwieruch.de/minimal-react-webpack-babel-setup/   
              
               This link has four tutorials. Study it later:
                   Part 1: How to set up a modern JavaScript project - https://www.robinwieruch.de/javascript-project-setup-tutorial/
@@ -909,35 +911,84 @@ REVIEW FOLDER 9 - React Testing
                   Continue Reading: How to use Fonts in React - https://www.robinwieruch.de/webpack-font/
                   Continue Reading: How to use Images in React - https://www.robinwieruch.de/webpack-images/
 
-   2. Step2: Configure your testing:
+   2. Step2: How to Test React with JEST (Configure your testing):
          Go to Course Module --> Testing --> Select JEST Pane - https://www.robinwieruch.de/react-testing-jest/
 
          Go to Jest Testing in React Setup - https://www.robinwieruch.de/react-testing-jest/
+
          This tutorial is part 2 of 2 in the series.
            Part 1: How to set up React with Webpack and Babel (discussed in Step1:) - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
 
-         Bring up C:\_AMyReactDev\reviewFolder9-how-to-test-react-components we created in Step 1.
-            - add the following to src/index.js
-            - add the following code to src/app.js and do 
+         Notes:
+            JEST comes with its own test runner. All your tests are defined as:
+                1. "Test Suites" (e.g. describe-block)
+                2. "Test Cases" (e.g. it-block or test-block)
+            The Jest setup allows you to add optional configuration, to introduce a setup 
+            routine yourself, or to define custom npm scripts to run your Jest tests. 
+            In this tutorial, you will learn how to perform all of it.
 
+         Setting it Up: 
+            Bring up C:\_AMyReactDev\reviewFolder9-how-to-test-react-components we created in Step 1.
+            - add the following to src/index.js
+
+            - add the following code to src/app.js and do  
+                npm install axios 
+                
             - in order to get our tests up and running, set up Jest by installing 
               it on the command line as development dependencies:
                           npm install --save-dev jest
 
-                  (A) modify package.json 
+                  (A) modify package.json to create a new npm script which runs jest
                       "scripts": {
                         "start": "webpack serve --config ./webpack.config.js --mode development",
                         "test": "jest --config ./jest.config.json"
                       },
+                      next define this optional configuration for jest ./jest.config.json"
+                      in a configuration file. From Command line do:
+                         touch jest.config.json
+                         
 
                   (B) define this optional configuration for Jest in a configuration file. 
                     Create it on the command line: touch jest.config.json
 
-                  (C) put the following test pattern in test.config.json to run all test files
+                  (C) put the following test pattern in jest.config.json to run all test files
                     which shall be executed by Jest
                         {
                           "testRegex": "((\\.|/*.)(spec))\\.js?$"
                         }
+                      //The testRegex configuration is a regular expression that can be used to specify the 
+                      //naming of the files where your Jest tests will be located. In this case, the files will
+                      //have the name *spec.js. That's how you can separate them clearly from other files 
+                      //in your src/ folder.
+
+                   (D) Next, add a test file next to your App component's file in a new src/App.spec.js file.
+                         touch src/App.spec.js
+                         
+                   (E) And second, implement your first test case in a test suite in this new file:
+                          describe('My Test Suite', () => {
+                            it('My Test Case', () => {
+                              expect(true).toEqual(true);
+                            });
+                          });
+
+                    (F) And finally Now you should be able to run:
+                             npm test 
+                        to execute your test suites with your test cases. The test should 
+                        be green (valid, successful) for your previous test case, 
+                        but if you change the test to something else, 
+                        let's say expect(true).toEqual(false);, it should be red (invalid, failed). 
+                        Congratulations, you have run your first test with Jest!
+
+                        Add another script in package.json: "test:watch": "npm run test -- --watch"
+
+                        Doing this you can have two terminals: 
+                          1. terminal tab to start your React application with 
+                               npm start
+                          2. Terminal tab for your Jest tests in watch mode with 
+                               npm run test:watch 
+
+
+
         EXERCISES: 
             Read more about getting started with Jest - https://jestjs.io/docs/getting-started
             Read more about Jest's Globals - https://jestjs.io/docs/api
