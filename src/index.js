@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-const title = 'Testing React with Webpack and Babel';
+const title = 'Step1 Testing React with Webpack and Babel';
 
 //Implement your entry point
 ReactDOM.render(
