@@ -944,14 +944,12 @@ REVIEW FOLDER 9 - React Testing
                         "test": "jest --config ./jest.config.json"
                       },
                       next define this optional configuration for jest ./jest.config.json"
-                      in a configuration file. From Command line/ROOT of the project do:
+                      in a configuration file. From command line/ROOT of the project do:
                             touch jest.config.json
                       this file will be created in the project root  (not in ./src)   
 
-                  (B) define this optional configuration for Jest in a configuration file. 
-                    Create it on the command line: touch jest.config.json
 
-                  (C) put the following test pattern in jest.config.json to run all test files
+                  (B) put the following test pattern in jest.config.json to run all test files
                     which shall be executed by Jest
                         {
                           "testRegex": "((\\.|/*.)(spec))\\.js?$"
@@ -961,17 +959,17 @@ REVIEW FOLDER 9 - React Testing
                       //have the name *spec.js. That's how you can separate them clearly from other files 
                       //in your src/ folder.
 
-                   (D) Next, add a test file next to your App component's file in a new src/App.spec.js file.
+                   (C) Next, add a test file next to your App component's file in a new src/App.spec.js file.
                          touch src/App.spec.js
                          
-                   (E) And second, implement your first test case in a test suite in this new file:
+                   (D) And second, implement your first test case in a test suite in this new file:
                           describe('My Test Suite', () => {
                             it('My Test Case', () => {
                               expect(true).toEqual(true);
                             });
                           });
 
-                    (F) And finally Now you should be able to run:
+                    (E) And finally Now you should be able to run:
                              npm test 
                         to execute your test suites with your test cases. The test should 
                         be green (valid, successful) for your previous test case, 
@@ -987,37 +985,16 @@ REVIEW FOLDER 9 - React Testing
                           2. Terminal tab for your Jest tests in watch mode with 
                                npm run test:watch 
 
-
+             -  Congratulations, you have run your first test with Jest!
+               
 
         EXERCISES: 
             Read more about getting started with Jest - https://jestjs.io/docs/getting-started
             Read more about Jest's Globals - https://jestjs.io/docs/api
             Read more about Jest's Assertions https://jestjs.io/docs/expect
-
-   3. STEP3: FINALLY In order to get our tests up and running, 
-         - set up Jest by:  npm install --save-dev jest
-
-         - modify package.json "scripts" add: 
-             "test": "jest --config ./jest.config.json"
-
-         - Define an optional configuration file: 
-             touch jest.config.json
-         - Implement first test case in this file: 
-              describe('My Test Suite', () => {
-              it('My Test Case', () => {
-                expect(true).toEqual(true);
-              });
-            });
          
-         - Now you should be able to run npm test to execute your test suites with your 
-           test cases. The test should be green (valid, successful) for your previous test 
-           case, but if you change the test to something else, let's say expect(true).toEqual(false);, 
-           it should be red (invalid, failed). 
-
-           Congratulations, you have run your first test with Jest!
-              npm test 
-
-   4. Jest Snapshot Testing in React  (TODO)
+   
+   3. Jest Snapshot Testing in React  (TODO)
        - Jest introduced the so-called Snapshot Test. Basically a Snapshot Test creates 
          a snapshot -- which is stored in a separate file -- of your rendered component's 
          output when you run your test.
@@ -1038,7 +1015,19 @@ REVIEW FOLDER 9 - React Testing
              Now run the test:
               npm run test:watch
 
+   4. Jest Unit/Integration Testing in React
 
+   5. Testing using Jest + React Testing Library
+       - https://www.robinwieruch.de/react-testing-library/
+
+       - Defining a Test Suite   
+           describe('my function or component', () => {  <-- describe-block
+              it('does the following', () => {           <-  it-block or test-case
+
+              });
+            });
+
+       - Defining an "It-Block" (which can be named "test instead of it")
 
   //============================================  
   //*    Notes: React Testing Overview
