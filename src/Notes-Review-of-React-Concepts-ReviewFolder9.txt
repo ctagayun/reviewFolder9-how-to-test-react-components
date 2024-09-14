@@ -1019,6 +1019,8 @@ REVIEW FOLDER 9 - React Testing
 
    5. Testing using Jest + React Testing Library
        - https://www.robinwieruch.de/react-testing-library/
+       
+       - see C:\_AMyReactDev\reviewFolder9-how-to-test-react-components
 
        - Defining a Test Suite   
            describe('my function or component', () => {  <-- describe-block
@@ -1031,7 +1033,15 @@ REVIEW FOLDER 9 - React Testing
 
    6. Testing using Vitest React Testing Library
         - https://www.robinwieruch.de/vitest-react-testing-library/
-        
+
+   7. React Testing Library: Rendering a Component
+       - https://www.robinwieruch.de/react-testing-library/
+
+       - After the setup in Jest or Vitest, you will learn how to render a 
+         React component in a test with React Testing Library. We will use the 
+         following function component called App component from a src/App.js file:
+
+
   //============================================  
   //*    Notes: React Testing Overview
   //============================================          
