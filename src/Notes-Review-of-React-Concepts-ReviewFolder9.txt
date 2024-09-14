@@ -767,6 +767,8 @@ REVIEW FOLDER 9 - React Testing
         --> Testing 
         ....
 
+       - Demo is in c:\_AMyReactDev\reviewFolder9-testing-settingup-testing-using-Jest-and-React-Testing-Lib
+     
        - Select Testing Menu Item:  
           (1) then select  Testing in React Pane - https://www.robinwieruch.de/react-testing-tutorial/
               Read the whole page to get a good overview.  
@@ -912,9 +914,13 @@ REVIEW FOLDER 9 - React Testing
                   Continue Reading: How to use Images in React - https://www.robinwieruch.de/webpack-images/
 
    2. Step2: How to Test React with JEST (Configure your testing):
+
+         Demo: c:\_AMyReactDev\reviewFolder9-testing-settingup-testing-using-Jest-and-React-Testing-Lib
+
          Go to Course Module --> Testing --> Select JEST Pane - https://www.robinwieruch.de/react-testing-jest/
 
          Go to Jest Testing in React Setup - https://www.robinwieruch.de/react-testing-jest/
+ 
 
          This tutorial is part 2 of 2 in the series.
            Part 1: How to set up React with Webpack and Babel (discussed in Step1:) - https://www.robinwieruch.de/minimal-react-webpack-babel-setup/
@@ -1015,9 +1021,11 @@ REVIEW FOLDER 9 - React Testing
              Now run the test:
               npm run test:watch
 
-   4. Jest Unit/Integration Testing in React
+   4. Jest Unit/Integration Testing in React (TODO)
 
    5. Testing using Jest + React Testing Library
+       - Demo: c:\_AMyReactDev\reviewFolder9-testing-settingup-testing-using-Jest-and-React-Testing-Lib
+
        - https://www.robinwieruch.de/react-testing-library/
        
        - see C:\_AMyReactDev\reviewFolder9-how-to-test-react-components
@@ -1031,15 +1039,18 @@ REVIEW FOLDER 9 - React Testing
 
        - Defining an "It-Block" (which can be named "test instead of it")
 
-   6. Testing using Vitest React Testing Library
+   6. Testing using Vitest React Testing Library (TODO)
         - https://www.robinwieruch.de/vitest-react-testing-library/
 
    7. React Testing Library: Rendering a Component
+       - Demo: c:\_AMyReactDev\reviewFolder9-testing-settingup-testing-using-Jest-and-React-Testing-Lib
+
        - https://www.robinwieruch.de/react-testing-library/
 
        - After the setup in Jest or Vitest, you will learn how to render a 
          React component in a test with React Testing Library. We will use the 
          following function component called App component from a src/App.js file:
+            
 
 
   //============================================  

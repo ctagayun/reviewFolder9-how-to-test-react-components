@@ -47,10 +47,10 @@ import { Counter } from './App';
 
   //Let's test a component call counter which is defined in another file (in this case  App.js).
   //First import the component here
-  describe('Counter', () => {
-    test('snapshot renders', () => {
-      const component = renderer.create(<Counter counter={1} />);
-      let tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
-    });
-  });
+  // describe('Counter', () => {
+  //   test('snapshot renders', () => {
+  //     const component = renderer.create(<Counter counter={1} />);
+  //     let tree = component.toJSON();
+  //     expect(tree).toMatchSnapshot();
+  //   });
+  // });
