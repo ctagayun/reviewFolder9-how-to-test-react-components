@@ -991,7 +991,7 @@
                             });
 
                       (E) And finally Now you should be able to run:
-                      
+
                                npm run test:watch 
 
                           to execute your test suites with your test cases. The test should 
@@ -1017,7 +1017,7 @@
               Read more about Jest's Assertions https://jestjs.io/docs/expect
           
     
-    3. Jest Snapshot Testing in React  (TODO)
+    3. Scroll down to "Jest Snapshot Testing in React"  (Not working) 
         - Jest introduced the so-called Snapshot Test. Basically a Snapshot Test creates 
           a snapshot -- which is stored in a separate file -- of your rendered component's 
           output when you run your test.
@@ -1038,9 +1038,10 @@
               Now run the test:
                 npm run test:watch
 
-    4. Jest Unit/Integration Testing in React (TODO)
+    4. Scroll down to "Jest Unit/Integration Testing in React" (TODO)
 
-    5. Testing using Jest + React Testing Library
+
+    5. Go to "Testing using Jest + React Testing Library"
         - Demo: c:\_AMyReactDev\reviewFolder9-testing-settingup-testing-using-Jest-and-React-Testing-Lib
 
         - https://www.robinwieruch.de/react-testing-library/
